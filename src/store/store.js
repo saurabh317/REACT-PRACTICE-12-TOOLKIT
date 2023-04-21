@@ -1,27 +1,5 @@
 // import  {legacy_createStore as createStore} from "redux";
-import { createSlice, configureStore } from '@reduxjs/toolkit';
 
-const initialState = {counter : 0 ,showToggle : true};
-
-const counterSlice = createSlice({
-  name: "counter",
-  initialState,
-  reducers: {
-    increment (state){
-      state.counter++;
-    },
-    decrement (state){
-      state.counter--;
-    },
-    decrease (state,action){
-      state.counter = state.counter - action.payload
-    },
-    toggle (state){
-      state.showToggle = !state.showToggle
-    }
-
-  }
-})
 
 // //setting up the reducer which is responsible for the state change
 // const counterReducer = (state = { counter: 0 , showToggle: true}, action) =>{
@@ -56,11 +34,9 @@ const counterSlice = createSlice({
 // }
  //setting up the store and making store aware about the reducer
 // const store = createStore(counterReducer);
-const store = configureStore({
-  reducer: counterSlice.reducer
-})
-
-export const CounterActions = counterSlice.actions;
 
 
-export default store;
+
+
+
+
